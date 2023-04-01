@@ -14,10 +14,10 @@ const Home = () => {
 
   const searchApi = (searchInput) => {
     fetch(`https://api.tvmaze.com/search/shows?q=${searchInput}`)
-    .then((response) => response.json())
-    .then((data) => setShows(data))
-    .catch((error) => console.error(error));
-  }
+      .then((response) => response.json())
+      .then((data) => setShows(data))
+      .catch((error) => console.error(error));
+  };
 
   const searchData = () => {
     searchApi(searchInput);
@@ -25,7 +25,7 @@ const Home = () => {
   const handleSearchInput = (e) => {
     setSearchInput(e.target.value);
   };
-     
+
   useEffect(() => {
     API();
   }, []);
@@ -45,19 +45,19 @@ const Home = () => {
       </div>
       <div className="row">
         {shows?.map((item) => (
-         //  console.log(item?.show?.image?.medium)
+          //  console.log(item?.show?.image?.medium)
           <div className="col-md-3" key={item.show.id}>
             <div className="card mb-4">
               <div className="card-body bg-gray rounded text-white bg-dark">
-                <div className="d-flex justify-content-center mt-4 mb-4">
+                <div className="d-flex justify-content-center mt-4 mb-4 ">
                   <img src={item?.show?.image?.medium} />
                 </div>
                 <h5 className="card-title">{item.show.name}</h5>
                 <div className="d-flex justify-content-between ">
-                <p className="card-text">{item.show.genres}</p>
-                <p className="card-text">{item.show.language}</p>
+                  <p className="card-text">{item.show.genres}</p>
+                  <p className="card-text">{item.show.language}</p>
                 </div>
-               
+
                 <Link to={`/show/${item.show.id}`} className="btn btn-primary">
                   View Summary
                 </Link>

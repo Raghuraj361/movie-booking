@@ -7,12 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Home from "@material-ui/icons/Home";
 import { Link } from "react-router-dom";
 
-
-
-
-
 const useStyles = makeStyles((theme) => ({
-  
   grow: {
     flexGrow: 1,
   },
@@ -25,17 +20,13 @@ const useStyles = makeStyles((theme) => ({
       display: "block",
     },
   },
-  home : {
-    color: "white"
-  }
- 
+  home: {
+    color: "white",
+  },
 }));
-
 
 function Header() {
   const classes = useStyles();
-
-  
 
   return (
     <div className={classes.grow}>
@@ -53,14 +44,12 @@ function Header() {
             Movie-Club
           </Typography>
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-            </div>
+            <div className={classes.searchIcon}></div>
           </div>
           <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-          </div>
-          <Link to='/'>
-            <Home className={classes.home}/>
+          <div className={classes.sectionDesktop}></div>
+          <Link to="/">
+            <Home className={classes.home} />
           </Link>
         </Toolbar>
       </AppBar>
