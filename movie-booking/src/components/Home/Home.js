@@ -49,7 +49,7 @@ const Home = () => {
           <div className="col-md-3" key={item.show.id}>
             <div className="card mb-4">
               <div className="card-body bg-gray rounded text-white bg-dark">
-                <div className="d-flex justify-content-center mt-4 mb-4 ">
+                <div className="d-flex justify-content-center mt-4 mb-4 overflow-hidden ">
                   <img src={item?.show?.image?.medium} />
                 </div>
                 <h5 className="card-title">{item.show.name}</h5>
